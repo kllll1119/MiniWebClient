@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window shadowcorner="0,0,0,0" size="300,50" caption="0,0,0,50" shadowattached="false">
+  <Box width="auto" height="auto">
+    <!-- normal top bar -->
+    <VBox width="300" height="auto" name="max_size_layout" >  <!-- 注意：最外层的容器不设置bkcolor,最外层容器的背景会自动为透明，这就解决了窗口高度最小14个高度的问题！ -->
+      <HBox height="50" width="stretch" bkimage="../spring_festival/1.jpg">
+        <Control width="auto" height="auto" bkimage="../spring_festival/logo.png" margin="5" valign="center" margin="15,0,15"/>
+		<Button class="btn_option" name="btn_guide_assistant_text"  text="导购" font="33" width="50" visible="false"/>
+        <Button class="btn_option" name="btn_option"  text="选项" font="33" width="50"/>
+        <Button class="btn_option" name="btn_account" text="账户" font="33" width="50"/>
+        <Box width="50" height="stretch">
+          <Button class="btn_option" name="btn_help" text="帮助" font="33" width="50"/>
+          <Control name="label_new_version" bkimage="../icons/new_msg_tips.png" width="auto" height="auto" margin="35,8,0,0" visible="false"/>
+        </Box>
+        <Control />
+        <Button class="btn_wnd_close_big" valign="center" name="closebtn_2" margin="12,0,8,0"/>   <!-- 注意此处的id如果是closebtn，则自动发送WM_CLOSE消息 -->
+      </HBox>
+      
+      <Box width="300" height="auto" bordersize="1" bordercolor="festival_red" padding="1,0,1,1">
+        <CefControl width="stretch" height="stretch" name="cef_control" bkcolor="white"  />
+      </Box>
+    
+    </VBox>
+    
+    <!-- little top bar -->
+    <HBox width="102" height="50" name="min_size_layout" bkcolor="festival_red" visible="false">
+      <Box>
+        <Control bkimage="../icons/logo-22.png" width="auto" height="auto" halign="center" valign="center" />
+      </Box>
+      <Box name="guide_assistant_icon" visible="false">
+		<Button class="btn_option" name="btn_guide_assistant_icon" cursortype="hand" bkimage="../icons/logo-22.png" width="auto" height="auto" halign="center" valign="center"/>
+      </Box>
+      <CefControl name="little_cef_control"/>
+      
+    </HBox>
+  </Box>
+
+</Window>

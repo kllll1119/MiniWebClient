@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window shadowcorner="0,0,10,10">
+
+  <VListBox class="menu" name="menulist" bordersize="1" bordercolor="light_gray" padding="4,4,4,4" width="auto" >
+    
+  </VListBox>
+</Window>

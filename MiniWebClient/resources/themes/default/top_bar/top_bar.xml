@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window shadowcorner="0,0,0,0" size="800,600" caption="0,0,0,50" shadowattached="false" name="topbar_wnd">
+  <VBox bkcolor="white">
+    <CefControl width="stretch" height="stretch" name="cef_control" bkcolor="white" />
+  </VBox>
+</Window>
