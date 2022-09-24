@@ -4,15 +4,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>length</title>
-		<script>
+		<script type="text/javascript">
 		function TFunctionCallBack(type, cmsg) {
-			console.log("收到C++消息：", type, ",", cmsg);
+			var strMsg = JSON.stringify(cmsg);
+			var info = "收到C++消息：" + type + "," + strMsg;
+			//console.log("收到C++消息：", type, ",", cmsg);
+			var x=document.getElementById("demo");  // 找到元素
+			x.innerHTML=info;    // 设置内容
 		}
 		</script>
 	</head>
 	<body>
-	<p>
-	这是一个C++调用JS的Demo
-	</p>
+	<p>这是一个C++调用JS的Demo</p>
+	<p1 id="demo"></p1>
 </body>
 </html>
