@@ -22,13 +22,31 @@ B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM
 2022-09-24    V1.4    1、增加窗口阴影，优化背景，移除404默认值
                                 2、增加关于菜单
 2022-09-24    V1.5    1、新增JS接口：显示隐藏当前窗口
+
+2022-09-25    V1.6    1、增加jS接口：最大化、最小化窗口
+                      2、增加再次打开程序或快捷方式，呼出主界面功能
 	
 ==============================
 
 
 ========== 工程配置 ==========
 路径：conf/config.ini
-配置项用法见配置内的说明
+[project]
+;主界面网页地址配置
+;打开本地页面（这个是相对当前工程的路径如：dir/1.html）：404.html
+;打开网页(如果是配置网页必须带http前缀)：https://www.baidu.com
+url_man=demo.html
+
+;404页面配置，目前只支持配置本地文件，所有返回页面错误(网页不返回200)都会打开它，路径为主程序的相对路径，示例：404/404.html
+url_404=
+
+;界面默认宽度
+width = 1360
+;界面默认高度
+height = 900
+
+;显示标题栏默认值1（1-显示，0-不显示）
+show_title_bar = 1
 
 
 ========== JS调用C++接口 ==========
@@ -40,6 +58,12 @@ TFunctionCpp.Excute('show_client',{"show":0})
 
 //显示/隐藏标题栏，0-隐藏，1-显示
 TFunctionCpp.Excute('show_title_bar',{"show":0})
+
+//最大化窗口，多次调用为最大化和恢复窗口
+TFunctionCpp.Excute('max_window',{})
+
+//最小化窗口
+TFunctionCpp.Excute('min_window',{})
 
 //退出程序
 TFunctionCpp.Excute('exit_client',{})
