@@ -5,17 +5,38 @@
 		<meta charset="utf-8" />
 		<title>length</title>
 		<script type="text/javascript">
+		//收到C++调用
 		function TFunctionCallBack(type, cmsg) {
 			var strMsg = JSON.stringify(cmsg);
 			var info = "收到C++消息：" + type + "," + strMsg;
-			//console.log("收到C++消息：", type, ",", cmsg);
+			console.log(info);
 			var x=document.getElementById("demo");  // 找到元素
 			x.innerHTML=info;    // 设置内容
+		}
+		
+		$(document).click(function() {
+			loadXMLDoc();
+		});
+
+		var flag=1;
+		function loadXMLDoc() {
+			if(flag) {
+				flag=0
+				TFunctionCpp.Excute('set_client_size',{"width":800,"height":600}) //调用C++
+			} else {
+				flag=1
+				TFunctionCpp.Excute('set_client_size',{"width":1200,"height":800}) 
+			}
 		}
 		</script>
 	</head>
 	<body>
 	<p>这是一个C++调用JS的Demo</p>
 	<p1 id="demo"></p1>
+	</br>
+	</br>
+	<button onclick="loadXMLDoc()">改变窗体大小</button>
+
+<script>
 </body>
 </html>

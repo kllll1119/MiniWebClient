@@ -1,15 +1,13 @@
 GitHub地址：https://github.com/kllll1119/MiniWebClient  
 B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM  
-
-==============================  
-========== Why MiniWebClient? ==========  
+  
+##Why MiniWebClient? 
 1、使前端开发桌面程序更加便捷，减少桌面程序的学习成本  
 2、修改一个配置前端即可进行桌面程序的逻辑开发，几乎零成本  
 3、提供C++端对前端的功能支持，使前端亦可操作计算机底层  
 
-
-==============================  
-============ 更新日志 ============  
+  
+##更新日志
 2022-09-17 V1.0    初框架搭建  
 
 2022-09-21 V1.1    性能优化，JS接口新增：隐藏窗口  
@@ -28,13 +26,11 @@ B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM
 				   
 2022-09-24 V1.5    新增JS接口：显示隐藏当前窗口  
 
-2022-09-25 V1.6.1  增加jS接口：最大化、最小化窗口    
+2022-09-25 V1.6.1  增加JS接口：最大化、最小化窗口    
                    增加再次打开程序或快捷方式，呼出主界面功能
   				   
-==============================  
 
-
-========== 工程配置 ==========  
+##工程配置
 路径：conf/config.ini  
 [project]  
 ;主界面网页地址配置  
@@ -54,7 +50,7 @@ height = 900
 show_title_bar = 1  
 
 
-========== JS调用C++接口 ==========  
+##JS调用C++接口
 //改变窗体大小  
 TFunctionCpp.Excute('set_client_size',{"width":800,"height":600})  
   
@@ -80,23 +76,22 @@ TFunctionCpp.Excute('open_url',{"url":"http://www.baidu.com"})
 //注：PopWebWindow只支持一个弹窗，执行多次也是打开一个窗口  
 TFunctionCpp.Excute('pop_web_window',{"url":"http://www.baidu.com","width":500,"height":300,"xpos":100,"ypos":100,"center_window":0,"show_title_bar":1})  
   
-
-========== C++调用JS接口 ==========  
+##C++调用JS接口
 //打开主界面时，程序默认会调用js方法，用法见demo.html  
-TFunctionCallBack("client_info", {"client_version":"1.0.0.1"}  
+TFunctionCallBack("client_info", {"client_version":"1.0.0"}  
 
 其他接口暂未提供，原则上也是TFunctionCallBack调用js，type和msg不同，如有需要C++支持的功能需要定制  
   
 
-========== 程序运行环境 ==========  
+##程序运行环境
 暂只支持Windows平台(Win7及以上，推荐Win10)
 
   
-========== 程序日志路径 ==========  
+##程序日志路径 
 文档\MiniWebClient\log（暂时是主程序在使用）  
 
 
-========== 作者联系方式 ==========  
+##作者联系方式
 QQ：2276386149  
 QQ交流群：687085061  
 
