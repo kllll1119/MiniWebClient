@@ -33,10 +33,10 @@ B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM
   * 新增JS接口：前进、后退、刷新  
   * 新增JS接口：截图功能  
 * 2022-09-27 V1.8.0  
-  * 调整JS接口：set_client_size增加xpos、ypos属性，提供控制窗口坐标能力  
-  * [VIP]调整JS接口：pop_web_window增加show_task_bar属性，提供控制软件是否在任务栏显示能力  
-  * [VIP]新增JS接口：show_task_bar，提供控制软件是否在任务栏显示能力  
-  * [VIP]工程配置新增：show_task_bar，主程序启动时控制是否在任务栏显示
+  * 调整JS接口：set_client_size增加xpos、ypos属性，提供控制窗口坐标  
+  * [VIP]调整JS接口：pop_web_window增加show_task_bar属性，提供控制软件是否在任务栏显示  
+  * [VIP]新增JS接口：show_task_bar，提供控制软件是否在任务栏显示  
+  * [VIP]工程配置新增：show_task_bar，主程序启动时控制是否在任务栏显示  
 
 ## 工程配置
 路径：conf/config.ini  
@@ -118,9 +118,10 @@ TFunctionCallBack("client_info", {"client_version":"1.0.0"}
 暂只支持Windows平台(Win7及以上，推荐Win10)
 
   
-## 程序日志路径 
+## 程序日志路径
 文档\MiniWebClient\log（暂时是主程序在使用）  
 
+## VIP获取或者定制请联系作者
 
 ## 作者联系方式
 QQ：2276386149  
