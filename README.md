@@ -35,7 +35,7 @@ B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM
 * 2022-09-27 V1.8.0  
   * 调整JS接口：set_client_size增加xpos、ypos属性，提供控制窗口坐标能力  
   * [VIP]调整JS接口：pop_web_window增加show_task_bar属性，提供控制软件是否在任务栏显示能力  
-  * [VIP]新增JS接口：提供控制软件是否在任务栏显示能力  
+  * [VIP]新增JS接口：show_task_bar，提供控制软件是否在任务栏显示能力  
   * [VIP]工程配置新增：show_task_bar，主程序启动时控制是否在任务栏显示
 
 ## 工程配置
