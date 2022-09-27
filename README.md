@@ -121,9 +121,9 @@ TFunctionCallBack("client_info", {"client_version":"1.0.0"}
 ## 程序日志路径
 文档\MiniWebClient\log（暂时是主程序在使用）  
 
-## VIP获取或者定制请联系作者
 
 ## 作者联系方式
 QQ：2276386149  
 QQ交流群：687085061  
+VIP获取或定制请联系作者  
 
