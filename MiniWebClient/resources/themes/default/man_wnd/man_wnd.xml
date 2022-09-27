@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Window shadowattached="false" size="1024,680" mininfo="300,300" caption="0,0,0,46" roundcorner="0,0" name="account_state_wnd" sizebox="5,5,5,5"> 
+<Window shadowattached="false" size="1024,680" mininfo="50,50" caption="0,0,0,46" roundcorner="0,0" name="account_state_wnd" sizebox="5,5,5,5"> 
 	<VBox bkcolor="white">   
 		<HBox height="32" name="title_bar" width="stretch" bkcolor="accountstatebgcolor">
 			<Control />

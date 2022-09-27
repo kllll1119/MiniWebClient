@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<title>length</title>
 		<script type="text/javascript">
-		//收到C++调用
+		//收到C++调用js
 		function TFunctionCallBack(type, cmsg) {
 			var strMsg = JSON.stringify(cmsg);
 			var info = "收到C++消息：" + type + "," + strMsg;
@@ -14,28 +14,27 @@
 			x.innerHTML=info;    // 设置内容
 		}
 		
-		$(document).click(function() {
-			loadXMLDoc();
-		});
-
 		var flag=1;
-		function loadXMLDoc() {
+		function test_call_cpp() {
 			if(flag) {
 				flag=0
-				TFunctionCpp.Excute('set_client_size',{"width":800,"height":600}) //调用C++
+				TFunctionCpp.Excute('set_client_size',{"xpos":-1,"ypos":-1,"width":800,"height":600}) //调用C++
 			} else {
 				flag=1
-				TFunctionCpp.Excute('set_client_size',{"width":1200,"height":800}) 
+				TFunctionCpp.Excute('set_client_size',{"xpos":100,"ypos":100,"width":1200,"height":800}) 
 			}
 		}
 		</script>
 	</head>
 	<body>
-	<p>这是一个C++调用JS的Demo</p>
+	<p>这是C++调用JS</p>
 	<p1 id="demo"></p1>
 	</br>
 	</br>
-	<button onclick="loadXMLDoc()">改变窗体大小</button>
+	</br>
+	</br>
+	<p>这是JS调用C++</p>
+	<button onclick="test_call_cpp()">改变窗体大小</button>
 
 <script>
 </body>
