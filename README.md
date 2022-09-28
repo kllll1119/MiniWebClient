@@ -37,6 +37,10 @@ B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM
   * [VIP]调整JS接口：pop_web_window增加show_task_bar属性，提供控制软件是否在任务栏显示  
   * [VIP]新增JS接口：show_task_bar，提供控制软件是否在任务栏显示  
   * [VIP]工程配置新增：show_task_bar，主程序启动时控制是否在任务栏显示  
+* 2022-09-27 V1.8.2  
+  * 修复截图工具在中文目前启动报错问题  
+  * 新增截图系统全局快捷键功能（CLTR+ALT+Q）暂不支持配置，被抢占会失效  
+  * 截图工具水印升级    
 
 ## 工程配置
 路径：conf/config.ini  
