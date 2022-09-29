@@ -42,7 +42,7 @@ B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM
   * 新增截图系统全局快捷键功能（CLTR+ALT+Q）暂不支持配置，被抢占会失效  
   * 截图工具水印升级  
 * 2022-10-29 V1.8.4  
-  * [VIP]新增JS接口：move_window，移动窗口  
+  * [VIP]新增JS接口：move_window，移动窗口（无标题时前端亦可做拖动）  
   * 优化截图工具性能及水印  
   * demo.html增加示例用法
 
