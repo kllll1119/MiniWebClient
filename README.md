@@ -99,8 +99,7 @@ TFunctionCpp.Excute('go_back',{})
 * Web页面：刷新  
 TFunctionCpp.Excute('refresh',{})  
   
-* 网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar任务栏是否显示：0-隐藏，1-显示（默认）  
-* 注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口  
+* 网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar任务栏是否显示：0-隐藏，1-显示（默认），注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口  
 TFunctionCpp.Excute('pop_web_window',{"url":"http://www.baidu.com","width":500,"height":300,"xpos":100,"ypos":100,"center_window":0,"show_title_bar":1,"show_task_bar":0}}) 
 
 * 截图功能，hide_cur_window:截图时是否隐藏当前窗口，0-不隐藏（默认），1-隐藏  
