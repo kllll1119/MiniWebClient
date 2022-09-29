@@ -100,20 +100,20 @@ TFunctionCpp.Excute('go_back',{})
 TFunctionCpp.Excute('refresh',{})  
   
 * 网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar任务栏是否显示：0-隐藏，1-显示（默认）  
-  * 注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口  
+* 注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口  
 TFunctionCpp.Excute('pop_web_window',{"url":"http://www.baidu.com","width":500,"height":300,"xpos":100,"ypos":100,"center_window":0,"show_title_bar":1,"show_task_bar":0}}) 
 
 * 截图功能，hide_cur_window:截图时是否隐藏当前窗口，0-不隐藏（默认），1-隐藏  
 TFunctionCpp.Excute('screen_shot',{"hide_cur_window": 1})  
 
-* [VIP]控制软件是否在任务栏显示,show_task_bar：0-隐藏，1-显示（默认），（关闭了隐藏任务栏，建议也不显示标题栏title_bar）
+* [VIP] 控制软件是否在任务栏显示,show_task_bar：0-隐藏，1-显示（默认），（关闭了隐藏任务栏，建议也不显示标题栏title_bar）
 TFunctionCpp.Excute('show_task_bar',{"show_task_bar": 0})  
 
-* [VIP]移动窗口，注：web端点击鼠标左键的时候调用，特别注意，只调用一次;只调用一次  
+* [VIP] 移动窗口，注：web端点击鼠标左键的时候调用，特别注意，只调用一次;只调用一次  
 TFunctionCpp.Excute('move_window',{}) 
   
 ## C++调用JS接口
-//打开主界面时，程序默认会调用js方法，用法见demo.html  
+* 打开主界面时，程序默认会调用js方法，用法见demo.html  
 TFunctionCallBack("client_info", {"client_version":"1.0.0"}  
 
 其他接口暂未提供，原则上也是TFunctionCallBack调用js，type和msg不同，如有需要C++支持的功能需要定制  
