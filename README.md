@@ -118,10 +118,10 @@ TFunctionCallBack("client_info", {"client_version":"1.0.0"}
 其他接口暂未提供，原则上也是TFunctionCallBack调用js，type和msg不同，如有需要C++支持的功能需要定制  
 
 ## 如何打开调试控制台
-1、交流群下载devtools_resources.pak调试器  
-2、将之放到cef目录  
-3、重启程序  
-4、再次打开程序，按f12即可唤出调试程序
+* 交流群下载devtools_resources.pak调试器  
+* devtools_resources.pak放到cef目录  
+* 重启程序  
+* 点击程序Web端，按f12即可唤出调试程序
 
 
 ## 程序运行环境
