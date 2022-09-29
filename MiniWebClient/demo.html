@@ -8,14 +8,14 @@
 		//收到C++调用js
 		function TFunctionCallBack(type, cmsg) {
 			var strMsg = JSON.stringify(cmsg);
-			var info = "收到C++消息：" + type + "," + strMsg;
+			var info = "收到C++调用JS消息：" + type + "," + strMsg;
 			console.log(info);
 			var x=document.getElementById("demo");  // 找到元素
 			x.innerHTML=info;    // 设置内容
 		}
 		
 		var flag=1;
-		function test_call_cpp() {
+		function c_change_size() {
 			if(flag) {
 				flag=0
 				TFunctionCpp.Excute('set_client_size',{"xpos":-1,"ypos":-1,"width":800,"height":600}) //调用C++
@@ -24,18 +24,46 @@
 				TFunctionCpp.Excute('set_client_size',{"xpos":100,"ypos":100,"width":1200,"height":800}) 
 			}
 		}
+		var flag_title_bar=1;
+		function c_show_title_bar() {
+			if(flag_title_bar) {
+				flag_title_bar=0
+				TFunctionCpp.Excute('show_title_bar',{"show":0})
+			} else {
+				flag_title_bar=1
+				TFunctionCpp.Excute('show_title_bar',{"show":1})
+			}
+		}
+		function c_open_url() {
+			TFunctionCpp.Excute('open_url',{"url":"http://www.baidu.com"})
+		}
+		function c_screen_shot() {
+			TFunctionCpp.Excute('screen_shot',{"hide_cur_window": 1})
+		}
+		function c_move_window() {
+			TFunctionCpp.Excute('move_window',{})
+		}
+		
+		
 		</script>
 	</head>
 	<body>
-	<p>这是C++调用JS</p>
+	<p>--------------- 这是C++调用JS示例 ---------------</p>
 	<p1 id="demo"></p1>
 	</br>
 	</br>
 	</br>
 	</br>
-	<p>这是JS调用C++</p>
-	<button onclick="test_call_cpp()">改变窗体大小</button>
-
+	<p>--------------- 这是JS调用C++示例 ---------------</p>
+	<button onclick="c_change_size()">改变窗体大小</button>
+	<button onclick="c_show_title_bar()">显示隐藏标题栏</button>
+	</br>
+	</br>
+	<button onclick="c_open_url()">打开网页</button>
+	<button onclick="c_screen_shot()">截图</button>
+	
+	</br>
+	<p onmousedown="c_move_window()">[vip]移动窗口测试，请点击此文本（鼠标左键一直按下拖动）！</p>
 <script>
 </body>
 </html>

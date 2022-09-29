@@ -40,7 +40,11 @@ B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM
 * 2022-09-28 V1.8.2  
   * 修复截图工具在中文目录启动报错问题  
   * 新增截图系统全局快捷键功能（CLTR+ALT+Q）暂不支持配置，被抢占会失效  
-  * 截图工具水印升级    
+  * 截图工具水印升级  
+* 2022-10-29 V1.8.4  
+  * [VIP]新增JS接口：move_window，移动窗口  
+  * 优化截图工具性能及水印  
+  * demo.html增加示例用法
 
 ## 工程配置
 路径：conf/config.ini  
@@ -65,45 +69,48 @@ show_title_bar = 1
 show_task_bar = 1  
 
 ## JS调用C++接口
-//改变窗体大小,xpos和ypos分别为指定的桌面坐标，非必传默认-1，为-1时为不指定，此时居中显示  
+* 改变窗体大小,xpos和ypos分别为指定的桌面坐标，非必传默认-1，为-1时为不指定，此时居中显示  
 TFunctionCpp.Excute('set_client_size',{"xpos":-1,"ypos":-1,"width":800,"height":600})  
   
-//显示/隐藏窗口，0-隐藏，1-显示  
+* 显示/隐藏窗口，0-隐藏，1-显示  
 TFunctionCpp.Excute('show_client',{"show":0})  
   
-//显示/隐藏标题栏，0-隐藏，1-显示  
+* 显示/隐藏标题栏，0-隐藏，1-显示  
 TFunctionCpp.Excute('show_title_bar',{"show":0})  
   
-//最大化窗口，多次调用为最大化和恢复窗口  
+* 最大化窗口，多次调用为最大化和恢复窗口  
 TFunctionCpp.Excute('max_window',{})  
   
-//最小化窗口  
+* 最小化窗口  
 TFunctionCpp.Excute('min_window',{})  
   
-//退出程序  
+* 退出程序  
 TFunctionCpp.Excute('exit_client',{})  
   
-//以默认浏览器打开网页  
+* 以默认浏览器打开网页  
 TFunctionCpp.Excute('open_url',{"url":"http://www.baidu.com"})  
 
-//Web页面：前进  
+* Web页面：前进  
 TFunctionCpp.Excute('go_forward',{})  
 
-//Web页面：后退  
+* Web页面：后退  
 TFunctionCpp.Excute('go_back',{})  
 
-//Web页面：刷新  
+* Web页面：刷新  
 TFunctionCpp.Excute('refresh',{})  
   
-//网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar任务栏是否显示：0-隐藏，1-显示（默认）  
-//注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口  
+* 网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar任务栏是否显示：0-隐藏，1-显示（默认）  
+  * 注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口  
 TFunctionCpp.Excute('pop_web_window',{"url":"http://www.baidu.com","width":500,"height":300,"xpos":100,"ypos":100,"center_window":0,"show_title_bar":1,"show_task_bar":0}}) 
 
-//截图功能，hide_cur_window:截图时是否隐藏当前窗口，0-不隐藏（默认），1-隐藏  
+* 截图功能，hide_cur_window:截图时是否隐藏当前窗口，0-不隐藏（默认），1-隐藏  
 TFunctionCpp.Excute('screen_shot',{"hide_cur_window": 1})  
 
-//[VIP]控制软件是否在任务栏显示,show_task_bar：0-隐藏，1-显示（默认），（关闭了隐藏任务栏，建议也不显示标题栏title_bar）
-TFunctionCpp.Excute('show_task_bar',{"show_task_bar": 0})   
+* [VIP]控制软件是否在任务栏显示,show_task_bar：0-隐藏，1-显示（默认），（关闭了隐藏任务栏，建议也不显示标题栏title_bar）
+TFunctionCpp.Excute('show_task_bar',{"show_task_bar": 0})  
+
+* [VIP]移动窗口，注：web端点击鼠标左键的时候调用，特别注意，只调用一次;只调用一次  
+TFunctionCpp.Excute('move_window',{}) 
   
 ## C++调用JS接口
 //打开主界面时，程序默认会调用js方法，用法见demo.html  
@@ -129,5 +136,6 @@ TFunctionCallBack("client_info", {"client_version":"1.0.0"}
 ## 作者联系方式
 QQ：2276386149  
 QQ交流群：687085061  
+
 VIP获取或定制请联系作者  
 
