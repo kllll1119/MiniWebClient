@@ -5,11 +5,11 @@
     <VBox width="300" height="auto" name="max_size_layout" >  <!-- 注意：最外层的容器不设置bkcolor,最外层容器的背景会自动为透明，这就解决了窗口高度最小14个高度的问题！ -->
       <HBox height="50" width="stretch" bkimage="../spring_festival/1.jpg">
         <Control width="auto" height="auto" bkimage="../spring_festival/logo.png" margin="5" valign="center" margin="15,0,15"/>
-		<Button class="btn_option" name="btn_guide_assistant_text"  text="导购" font="33" width="50" visible="false"/>
-        <Button class="btn_option" name="btn_option"  text="选项" font="33" width="50"/>
-        <Button class="btn_option" name="btn_account" text="账户" font="33" width="50"/>
+		<Button class="btn_option" name="btn_guide_assistant_text"  text="dg" font="33" width="50" visible="false"/>
+        <Button class="btn_option" name="btn_option"  text="option" font="33" width="50"/>
+        <Button class="btn_option" name="btn_account" text="acc" font="33" width="50"/>
         <Box width="50" height="stretch">
-          <Button class="btn_option" name="btn_help" text="帮助" font="33" width="50"/>
+          <Button class="btn_option" name="btn_help" text="htlp" font="33" width="50"/>
           <Control name="label_new_version" bkimage="../icons/new_msg_tips.png" width="auto" height="auto" margin="35,8,0,0" visible="false"/>
         </Box>
         <Control />
