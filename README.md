@@ -44,7 +44,12 @@
   * 优化截图工具性能及水印  
   * demo.html增加示例用法
 * **2022-9-30 V1.8.6**  
-  * 优化本地资源，优化程序大小
+  * 优化本地资源，优化程序大小  
+* **2022-9-30 V1.8.7**  
+  * 新增config配置：max_window
+  * 调整JS接口：max_window为只最大化窗口
+  * 新增JS接口：restore_window，恢复窗口
+  
 
 ## 工程配置
 路径：conf/config.ini  
@@ -62,6 +67,9 @@ width = 1360
 ;界面默认高度  
 height = 900  
   
+;启动程序是否最大化，默认0  
+max_window=1  
+  
 ;显示标题栏：1-显示（默认值），0-不显示  
 show_title_bar = 1  
 
@@ -78,8 +86,11 @@ TFunctionCpp.Excute('show_client',{"show":0})
 * 显示/隐藏标题栏，0-隐藏，1-显示  
 TFunctionCpp.Excute('show_title_bar',{"show":0})  
   
-* 最大化窗口，多次调用为最大化和恢复窗口  
-TFunctionCpp.Excute('max_window',{})  
+* 最大化窗口 
+TFunctionCpp.Excute('max_window',{}) 
+
+* 恢复窗口，最大化后恢复  
+TFunctionCpp.Excute('restore_window',{})   
   
 * 最小化窗口  
 TFunctionCpp.Excute('min_window',{})  

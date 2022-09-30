@@ -8,7 +8,7 @@
     </HBox>
     <VBox>  <!-- content -->
 		<Label name="img_logo" bkimage="../icons/logo.png" margin="96,20"/>
-		<Button name="btn_ok" text="MiniWebClient" font="13" height="30" width="280" margin="39,10" bkcolor="whitesmoke2" normaltextcolor="blue" cursortype="hand"/>
+		<Button name="btn_ok" text="MiniWebClient" font="13" height="30" width="320" margin="0,10" bkcolor="whitesmoke2" normaltextcolor="blue" cursortype="hand"/>
     </VBox>
   </VBox>
 </Window>
