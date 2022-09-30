@@ -1,50 +1,50 @@
-GitHub地址：https://github.com/kllll1119/MiniWebClient  
-B站地址：https://www.bilibili.com/video/BV1aV4y1M7dM  
-  
 ## Why MiniWebClient?  
-1、使前端开发桌面程序更加便捷，减少桌面程序的学习成本  
-2、修改一个配置前端即可进行桌面程序的逻辑开发，几乎零成本  
-3、提供C++端对前端的功能支持，使前端亦可操作计算机底层  
-
+* **使前端开发桌面程序更加便捷，减少桌面程序的学习成本**  
+* **修改一个配置前端即可进行桌面程序的逻辑开发，几乎零成本**  
+* **提供C++端对前端的功能支持，使前端亦可操作计算机底层**  
+  
+  
   
 ## 更新日志
-* 2022-09-17 V1.0  
+* **2022-09-17 V1.0**  
   * 初框架搭建  
-* 2022-09-21 V1.1  
+* **2022-09-21 V1.1**  
   * 性能优化，JS接口新增：隐藏窗口  
-* 2022-09-23 V1.2  
+* **2022-09-23 V1.2**  
   * 工程配置新增标题栏显示  
   * 新增JS接口：隐藏显示标题栏  		   
-* 2022-09-23 V1.3  
+* **2022-09-23 V1.3**  
   * 优化托盘双击恢复主界面  
   * 新增C++加载主界面，调用JS，通知初始化信息	
   * 新增JS接口：用默认浏览器打开网页  
   * 新增404页面功能  
   * 新增弹窗功能  
-* 2022-09-24 V1.4  
+* **2022-09-24 V1.4**  
   * 增加窗口阴影，优化背景，移除404默认值  
   * 增加关于菜单  		   
-* 2022-09-24 V1.5  
+* **2022-09-24 V1.5**  
   * 新增JS接口：显示隐藏当前窗口  
-* 2022-09-25 V1.6.1  
+* **2022-09-25 V1.6.1**  
   * 增加JS接口：最大化、最小化窗口  
   * 增加再次打开程序或快捷方式，呼出主界面功能  
-* 2022-09-27 V1.7.0  
+* **2022-09-27 V1.7.0**  
   * 新增JS接口：前进、后退、刷新  
   * 新增JS接口：截图功能  
-* 2022-09-27 V1.8.0  
+* **2022-09-27 V1.8.0**  
   * 调整JS接口：set_client_size增加xpos、ypos属性，提供控制窗口坐标  
   * [VIP]调整JS接口：pop_web_window增加show_task_bar属性，提供控制软件是否在任务栏显示  
   * [VIP]新增JS接口：show_task_bar，提供控制软件是否在任务栏显示  
   * [VIP]工程配置新增：show_task_bar，主程序启动时控制是否在任务栏显示  
-* 2022-09-28 V1.8.2  
+* **2022-09-28 V1.8.2**  
   * 修复截图工具在中文目录启动报错问题  
   * 新增截图系统全局快捷键功能（CLTR+ALT+Q）暂不支持配置，被抢占会失效  
   * 截图工具水印升级  
-* 2022-10-29 V1.8.4  
+* **2022-9-29 V1.8.4**  
   * [VIP]新增JS接口：move_window，移动窗口（无标题时前端亦可做拖动）  
   * 优化截图工具性能及水印  
   * demo.html增加示例用法
+* **2022-9-30 V1.8.6**  
+  * 优化本地资源，优化程序大小
 
 ## 工程配置
 路径：conf/config.ini  
@@ -99,7 +99,7 @@ TFunctionCpp.Excute('go_back',{})
 * Web页面：刷新  
 TFunctionCpp.Excute('refresh',{})  
   
-* 网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar任务栏是否显示：0-隐藏，1-显示（默认），注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口  
+* 网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar显示/隐藏任务栏：0-隐藏，1-显示（默认），**注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口**  
 TFunctionCpp.Excute('pop_web_window',{"url":"http://www.baidu.com","width":500,"height":300,"xpos":100,"ypos":100,"center_window":0,"show_title_bar":1,"show_task_bar":0}}) 
 
 * 截图功能，hide_cur_window:截图时是否隐藏当前窗口，0-不隐藏（默认），1-隐藏  
@@ -108,17 +108,17 @@ TFunctionCpp.Excute('screen_shot',{"hide_cur_window": 1})
 * [VIP] 控制软件是否在任务栏显示,show_task_bar：0-隐藏，1-显示（默认），（关闭了隐藏任务栏，建议也不显示标题栏title_bar）
 TFunctionCpp.Excute('show_task_bar',{"show_task_bar": 0})  
 
-* [VIP] 移动窗口，注：web端点击鼠标左键的时候调用，特别注意，只调用一次;只调用一次  
+* [VIP] 移动窗口，**注：web端点击鼠标左键的时候调用，特别注意，只调用一次**  
 TFunctionCpp.Excute('move_window',{}) 
   
 ## C++调用JS接口
 * 打开主界面时，程序默认会调用js方法，用法见demo.html  
 TFunctionCallBack("client_info", {"client_version":"1.0.0"}  
 
-其他接口暂未提供，原则上也是TFunctionCallBack调用js，type和msg不同，如有需要C++支持的功能需要定制  
+* 其他接口暂未提供，原则上也是TFunctionCallBack调用js，type和msg不同，如有需要C++支持的功能需要定制  
 
 ## 如何打开调试控制台
-* 交流群下载devtools_resources.pak调试器  
+* **交流群下载devtools_resources.pak调试器**  
 * devtools_resources.pak放到cef目录  
 * 重启程序  
 * 点击程序Web端，按f12即可唤出调试程序
@@ -132,9 +132,10 @@ TFunctionCallBack("client_info", {"client_version":"1.0.0"}
 文档\MiniWebClient\log（暂时是主程序在使用）  
 
 
-## 作者联系方式
+## 联系方式
 QQ：2276386149  
 QQ交流群：687085061  
+[GitHub](https://github.com/kllll1119/MiniWebClient)     [B站](https://www.bilibili.com/video/BV1aV4y1M7dM) 
 
-VIP获取或定制请联系作者  
+***VIP获取或定制请联系作者***  
 

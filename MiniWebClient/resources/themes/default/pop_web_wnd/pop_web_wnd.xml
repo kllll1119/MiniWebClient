@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Window shadowattached="false" size="800,600" mininfo="100,100" caption="0,0,0,46" roundcorner="0,0" name="account_state_wnd" sizebox="5,5,5,5"> 
+<Window shadowattached="false" size="800,600" mininfo="100,100" caption="0,0,0,46" roundcorner="0,0" name="pop_web_wnd" sizebox="5,5,5,5"> 
 	<VBox bkcolor="white">   
 		<HBox height="32" name="title_bar" width="stretch" bkcolor="accountstatebgcolor">
 			<Control />
@@ -9,7 +9,7 @@
 			<Button valign="center" name="close_btn"  margin="0,0,0,0" bkimage="../icons/close.png" hotimage="../icons/close-hover.png"/>
 		</HBox>	 
 		<HBox>
-			<CefControl name="cef_control" bkcolor="white" />  <!-- 注意：由CefControl控制整个窗口的高度 -->
+			<CefControl name="cef_control" bkcolor="white" />  <!-- 注意：由CefControl控制整个窗口的高�?-->
 		</HBox>
 	</VBox>
 </Window>
