@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window shadowcorner="0,0,0,0" size="10,10" caption="0,0,0,50" shadowattached="false" name="topbar_wnd">
+	<VBox bkcolor="white">
+	</VBox>
+</Window>
