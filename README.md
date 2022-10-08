@@ -29,7 +29,7 @@
   * 增加再次打开程序或快捷方式，呼出主界面功能  
 * **2022-09-27 V1.7.0**  
   * 新增JS接口：前进、后退、刷新  
-  * 新增JS接口：截图功能  
+  * 新增JS接口：截图功能（截图插件交流群获取）  
 * **2022-09-27 V1.8.0**  
   * 调整JS接口：set_client_size增加xpos、ypos属性，提供控制窗口坐标  
   * [VIP]调整JS接口：pop_web_window增加show_task_bar属性，提供控制软件是否在任务栏显示  
@@ -37,7 +37,7 @@
   * [VIP]工程配置新增：show_task_bar，主程序启动时控制是否在任务栏显示  
 * **2022-09-28 V1.8.2**  
   * 修复截图工具在中文目录启动报错问题  
-  * 新增截图系统全局快捷键功能（CLTR+ALT+Q）暂不支持配置，被抢占会失效  
+  * 新增截图工具***系统快捷键功能（CLTR+ALT+Q）***暂不支持配置，被抢占会失效  
   * 截图工具水印升级  
 * **2022-9-29 V1.8.4**  
   * [VIP]新增JS接口：move_window，移动窗口（无标题时前端亦可做拖动）  
@@ -46,9 +46,9 @@
 * **2022-9-30 V1.8.6**  
   * 优化本地资源，优化程序大小  
 * **2022-9-30 V1.8.7**  
-  * 新增config配置：max_window
-  * 调整JS接口：max_window为只最大化窗口
-  * 新增JS接口：restore_window，恢复窗口
+  * 新增config配置：max_window  
+  * 调整JS接口：max_window为只最大化窗口  
+  * 新增JS接口：restore_window，恢复窗口  
   
 
 ## 工程配置
@@ -113,7 +113,7 @@ TFunctionCpp.Excute('refresh',{})
 * 网页弹窗,center_window为1的时候窗口居中，此时xpos和ypos不生效，show_title_bar显示/隐藏标题栏：0-隐藏，1-显示, show_task_bar显示/隐藏任务栏：0-隐藏，1-显示（默认），**注：pop_web_window只支持一个弹窗，执行多次也是打开一个窗口**  
 TFunctionCpp.Excute('pop_web_window',{"url":"http://www.baidu.com","width":500,"height":300,"xpos":100,"ypos":100,"center_window":0,"show_title_bar":1,"show_task_bar":0}}) 
 
-* 截图功能，hide_cur_window:截图时是否隐藏当前窗口，0-不隐藏（默认），1-隐藏  
+* 截图功能（需引入插件TScreenShot.exe到plugins目录），hide_cur_window:截图时是否隐藏当前窗口，0-不隐藏（默认），1-隐藏  
 TFunctionCpp.Excute('screen_shot',{"hide_cur_window": 1})  
 
 * [VIP] 控制软件是否在任务栏显示,show_task_bar：0-隐藏，1-显示（默认），（关闭了隐藏任务栏，建议也不显示标题栏title_bar）
