@@ -49,6 +49,7 @@
   * 新增config配置：max_window  
   * 调整JS接口：max_window为只最大化窗口  
   * 新增JS接口：restore_window，恢复窗口  
+  * 移除一些多余资源，减小工程大小  
   
 
 ## 工程配置
