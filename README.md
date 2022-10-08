@@ -37,7 +37,7 @@
   * [VIP]工程配置新增：show_task_bar，主程序启动时控制是否在任务栏显示  
 * **2022-09-28 V1.8.2**  
   * 修复截图工具在中文目录启动报错问题  
-  * 新增截图工具***系统快捷键功能（CLTR+ALT+Q）***暂不支持配置，被抢占会失效  
+  * 新增截图工具 **系统快捷键功能（CLTR+ALT+Q）** 暂不支持配置，被抢占会失效  
   * 截图工具水印升级  
 * **2022-9-29 V1.8.4**  
   * [VIP]新增JS接口：move_window，移动窗口（无标题时前端亦可做拖动）  
@@ -144,9 +144,9 @@ TFunctionCallBack("client_info", {"client_version":"1.0.0"}
 
 
 ## 联系方式
-QQ：2276386149  
-QQ交流群：687085061  
-[GitHub](https://github.com/kllll1119/MiniWebClient)     [B站](https://www.bilibili.com/video/BV1aV4y1M7dM) 
+QQ： **2276386149**  
+QQ交流群： **687085061**  
+[GitHub](https://github.com/kllll1119/MiniWebClient)       [B站](https://www.bilibili.com/video/BV1aV4y1M7dM) 
 
 ***VIP获取或定制请联系作者***  
 
