@@ -38,7 +38,7 @@
 			TFunctionCpp.Excute('open_url',{"url":"http://www.baidu.com"})
 		}
 		function c_screen_shot() {
-			TFunctionCpp.Excute('screen_shot',{"hide_cur_window": 1})
+			TFunctionCpp.Excute('screen_shot',{"hide_cur_window": 0})
 		}
 		function c_move_window() {
 			TFunctionCpp.Excute('move_window',{})
@@ -60,7 +60,7 @@
 	</br>
 	</br>
 	<button onclick="c_open_url()">打开网页</button>
-	<button onclick="c_screen_shot()">截图</button>
+	<button onclick="c_screen_shot()">截图(需引入TScreenShot插件)</button>
 	
 	</br>
 	<p onmousedown="c_move_window()">[vip]移动窗口测试，请点击此文本（鼠标左键一直按下拖动）！</p>
