@@ -2,13 +2,13 @@
 <Window shadowcorner="0,0,0,0" size="320,268" caption="0,0,0,30" shadowattached="false">
   <VBox bkcolor="white" bordercolor="whitesmoke2" bordersize="1,1,1,1">
     <HBox height="30" bkcolor="white" name="title_box">
-      <Label name="nicknameLabel" text="当前版本" font="2" valign="center" normaltextcolor="littledarkcolor" margin="10"/>
+      <Label name="title" text="当前版本" font="2" valign="center" normaltextcolor="littledarkcolor" margin="10"/>
       <Control />
       <Button valign="center" name="close_btn"  margin="0,0,0,0" bkimage="../icons/close.png" hotimage="../icons/close-hover.png"/>
     </HBox>
     <VBox>  <!-- content -->
 		<Label name="img_logo" bkimage="../icons/logo.png" margin="96,20"/>
-		<Button name="btn_ok" text="MiniWebClient" font="13" height="30" width="320" margin="0,10" bkcolor="whitesmoke2" normaltextcolor="blue" cursortype="hand"/>
+		<Button name="btn_ok" text="MiniWebClient" font="13" height="30" width="280" margin="10,10" halign="center" normaltextcolor="blue" cursortype="hand"/>
     </VBox>
   </VBox>
 </Window>
